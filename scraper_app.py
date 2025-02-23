@@ -4,11 +4,8 @@ from bs4 import BeautifulSoup as bs
 from requests import get
 import streamlit.components.v1 as components
 
-# --- Configuration de la page avec un titre neutre et moderne ---
-st.set_page_config(page_title="Smart Fashion Scraper", page_icon=":bar_chart:", layout="wide")
 
-
-# --- Fonction pour définir un fond d'écran en dégradé neutre et fixer la couleur du texte ---
+# --- Fonction pour définir un fond d'écran et fixer la couleur du texte ---
 def set_background():
     st.markdown(
         """
@@ -18,7 +15,7 @@ def set_background():
             background-attachment: fixed;
         }
         .stApp * {
-            color: #ffffff;  /* Texte en noir pour un meilleur contraste */
+            color: #ffffff; 
         }
         </style>
         """,
@@ -27,7 +24,8 @@ def set_background():
 
 set_background()
 
-# --- En-tête principal ---
+# --- Configuration de la page avec un titre , puis ajout d'une petite description ---
+st.set_page_config(page_title="Smart Fashion Scraper", page_icon=":bar_chart:", layout="wide")
 st.markdown(
     """
     <style>
@@ -46,6 +44,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+
 st.markdown(
     """
     <div style='text-align: center; font-size: 16px;'>
@@ -60,6 +59,7 @@ st.markdown("""
 * **Python libraries:** base64, pandas, streamlit, requests, bs4
 * **Data source:** [CoinAfrique (vetements hommes)](https://sn.coinafrique.com/categorie/vetements-homme) -- [CoinAfrique (chaussures hommes)](https://sn.coinafrique.com/categorie/chaussures-homme)
 """)
+
 # --- Navigation multi-pages dans la sidebar ---
 page_option = st.sidebar.selectbox("Select Page", ["Data Scraping", "KoboToolbox Form", "Google Form"])
 
