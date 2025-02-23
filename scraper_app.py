@@ -175,7 +175,7 @@ if page_option == "Data Scraping":
         display_data(df_ch, "Men's Footwear Data", "shoes")
         
     elif scrape_method == "Raw Data (Web Scraper)":
-        st.markdown("<h2 style='text-align: center; color: #1a5276;'>Scraping Raw Data</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center; color: #1a5276;'>Download Raw Data</h2>", unsafe_allow_html=True)
         raw_clothes_df = load_raw_clothes_data()  # Base de données brute pour les vêtements
         raw_shoes_df = load_raw_shoes_data()      # Base de données brute pour les chaussures
         # Affichage l'un au-dessus de l'autre
