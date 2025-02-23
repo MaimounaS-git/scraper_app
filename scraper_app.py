@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup as bs
 from requests import get
 import base64
 import streamlit.components.v1 as components
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # --- Configuration de la page avec un titre neutre et moderne ---
 st.set_page_config(page_title="Smart Fashion Scraper", page_icon=":bar_chart:", layout="wide")
@@ -181,7 +183,7 @@ if page_option == "Data Scraping":
         display_data(raw_shoes_df, "Raw Men's Footwear Data", "raw_shoes")
 
 elif page_option == "KoboToolbox Form":
-    st.markdown("<h2 style='text-align: center;'>KoboToolbox Form</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: #1a5276;'>KoboToolbox Form</h2>", unsafe_allow_html=True)
     components.html(
         """
         <iframe src="https://ee.kobotoolbox.org/i/y3pfGxMz" width="100%" height="600"></iframe>
@@ -191,7 +193,7 @@ elif page_option == "KoboToolbox Form":
     )
 
 elif page_option == "Google Form":
-    st.markdown("<h2 style='text-align: center;'>Google Form</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; color: #1a5276;'>Google Form</h2>", unsafe_allow_html=True)
     components.html(
         """
         <iframe src="https://forms.gle/CeUo3e7aA3F417Lp8" width="100%" height="600"></iframe>
@@ -199,3 +201,4 @@ elif page_option == "Google Form":
         height=600,
         scrolling=True
     )
+
