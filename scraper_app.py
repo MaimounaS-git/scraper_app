@@ -5,25 +5,6 @@ from requests import get
 import streamlit.components.v1 as components
 
 
-# --- Fonction pour définir un fond d'écran et fixer la couleur du texte ---
-def set_background():
-    st.markdown(
-        """
-        <style>
-        .stApp {
-            background: linear-gradient(to top, #090909, #0c0c0c);
-            background-attachment: fixed;
-        }
-        .stApp * {
-            color: #ffffff; 
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-set_background()
-
 # --- Configuration de la page avec un titre , puis ajout d'une petite description ---
 st.set_page_config(page_title="Smart Fashion Scraper", page_icon=":bar_chart:", layout="wide")
 st.markdown(
@@ -44,6 +25,24 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
+# --- Fonction pour définir un fond d'écran et fixer la couleur du texte ---
+def set_background():
+    st.markdown(
+        """
+        <style>
+        .stApp {
+            background: linear-gradient(to top, #090909, #0c0c0c);
+            background-attachment: fixed;
+        }
+        .stApp * {
+            color: #ffffff; 
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+set_background()
 
 st.markdown(
     """
@@ -56,7 +55,7 @@ st.markdown(
 )
 
 st.markdown("""
-* **Python libraries:** base64, pandas, streamlit, requests, bs4
+* **Python libraries:** pandas, streamlit, requests, bs4
 * **Data source:** [CoinAfrique (vetements hommes)](https://sn.coinafrique.com/categorie/vetements-homme) -- [CoinAfrique (chaussures hommes)](https://sn.coinafrique.com/categorie/chaussures-homme)
 """)
 
