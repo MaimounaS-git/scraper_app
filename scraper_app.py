@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 from requests import get
-import base64
 import streamlit.components.v1 as components
 
 # --- Configuration de la page avec un titre neutre et moderne ---
