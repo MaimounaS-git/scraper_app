@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup as bs
 from requests import get
 import base64
 import streamlit.components.v1 as components
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # --- Configuration de la page avec un titre neutre et moderne ---
 st.set_page_config(page_title="Smart Fashion Scraper", page_icon=":bar_chart:", layout="wide")
